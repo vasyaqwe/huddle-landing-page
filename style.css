@@ -108,6 +108,11 @@ h4 {
 
 .btn:hover {
     background-color: var(--clr-primary-100);
+    transform: translate(1.5px, 1.5px);
+}
+
+.btn:active {
+    transform: translate(0)
 }
 
 .btn--header {
@@ -238,8 +243,9 @@ p:not(footer p) {
 }
 
 .ready {
+    margin-top: 5rem;
     text-align: center;
-    min-height: 60vh;
+    min-height: 50vh;
     background-image: url('./images/bg-footer-top-mobile.svg');
     background-repeat: no-repeat;
     background-position: bottom;
@@ -426,10 +432,6 @@ input::invalid {
 }
 
 @media(max-width:375px) {
-    main {
-        display: grid;
-        gap: 8rem;
-    }
 
     .grow-curve-top,
     .grow-curve-bottom,
@@ -438,9 +440,93 @@ input::invalid {
         display: none;
     }
 
+    .grow-curve-top--mobile {
+        margin-top: 5rem;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+    }
+
+    .grow-curve-top--mobile svg {
+        position: relative;
+        display: block;
+        width: calc(204% + 1.3px);
+        height: 127px;
+    }
+
+    .grow-curve-top--mobile .shape-fill {
+        fill: #f6fbff;
+    }
+
+    .grow-curve-bottom--mobile {
+        margin-bottom: 5rem;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+    }
+
+    .grow-curve-bottom--mobile svg {
+        position: relative;
+        display: block;
+        width: calc(300% + 1.3px);
+        height: 77px;
+    }
+
+    .grow-curve-bottom--mobile .shape-fill {
+        fill: #f6fbff;
+    }
+
+    .users-curve-top--mobile {
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+    }
+
+    .users-curve-top--mobile svg {
+        position: relative;
+        display: block;
+        width: calc(300% + 1.3px);
+        height: 218px;
+    }
+
+    .users-curve-top--mobile .shape-fill {
+        fill: #f6fbff;
+    }
+
+    .users-curve-bottom--mobile {
+        margin-bottom: 5rem;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+    }
+
+    .users-curve-bottom--mobile svg {
+        position: relative;
+        display: block;
+        width: calc(217% + 1.3px);
+        height: 147px;
+    }
+
+    .users-curve-bottom--mobile .shape-fill {
+        fill: #f6fbff;
+    }
+
+
+
 }
 
 @media(min-width: 375px) {
+
+    .grow-curve-top--mobile,
+    .grow-curve-bottom--mobile,
+    .users-curve-top--mobile,
+    .users-curve-bottom--mobile {
+        display: none;
+    }
+
     .grow-curve-top {
         margin-top: 5rem;
         width: 100%;
